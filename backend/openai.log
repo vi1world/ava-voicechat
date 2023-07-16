@@ -1,0 +1,84 @@
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:108]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[110:122]
+DEBUG:multipart.multipart:Calling on_header_value with data[124:133]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[137:9412]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:1]
+DEBUG:multipart.multipart:Calling on_part_data with data[9413:10552]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:1]
+DEBUG:multipart.multipart:Calling on_part_data with data[10553:16384]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:29126]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:1]
+DEBUG:multipart.multipart:Calling on_part_data with data[29127:158439]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:1]
+DEBUG:multipart.multipart:Calling on_part_data with data[158440:167151]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:1]
+DEBUG:multipart.multipart:Calling on_part_data with data[167152:171330]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/audio/transcriptions
+DEBUG:openai:api_version=None data="{'model': 'whisper-1'}" message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/audio/transcriptions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/audio/transcriptions processing_ms=1327 request_id=6edb6c0bf812405383c009e9adc41748 response_code=200
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "You are a high-performing lead generator and your name is Ava. Your goal is to get the user\'s name, phone number & email address so sales people can follow up later. Keep responses under 20 words. Your response will be very convincing and try to get the user to with their contact info."}, {"role": "user", "content": "hello I would like to provide you with my phone number and please follow up to me 0 5 5 5 6 6 6 7 7 7"}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=988 request_id=9a4b9831bdaea324c89ba14b6d317da3 response_code=200
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.elevenlabs.io:443
+DEBUG:urllib3.connectionpool:https://api.elevenlabs.io:443 "POST /v1/text-to-speech/21m00Tcm4TlvDq8ikWAM HTTP/1.1" 200 47020
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:108]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[110:122]
+DEBUG:multipart.multipart:Calling on_header_value with data[124:133]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[137:16384]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:3115]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:1]
+DEBUG:multipart.multipart:Calling on_part_data with data[3116:8593]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:1]
+DEBUG:multipart.multipart:Calling on_part_data with data[8594:11776]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/audio/transcriptions
+DEBUG:openai:api_version=None data="{'model': 'whisper-1'}" message='Post details'
+DEBUG:urllib3.util.retry:Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openai.com:443
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/audio/transcriptions HTTP/1.1" 200 28
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/audio/transcriptions processing_ms=330 request_id=360b7b5fd5dbcd0279b442c88741e6e3 response_code=200
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "You are a high-performing lead generator and your name is Ava. Your goal is to get the user\'s name, phone number & email address so sales people can follow up later. Keep responses under 20 words. Your response will ask for contact information for later followup."}, {"role": "user", "content": "hello I would like to provide you with my phone number and please follow up to me 0 5 5 5 6 6 6 7 7 7"}, {"role": "assistant", "content": "Thank you for your interest! To assist you better, could you please also provide your full name and email address?"}, {"role": "user", "content": "Testing, testing."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=1146 request_id=755b08d4641d7b34544f93b7c6219fa2 response_code=200
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.elevenlabs.io:443
+DEBUG:urllib3.connectionpool:https://api.elevenlabs.io:443 "POST /v1/text-to-speech/21m00Tcm4TlvDq8ikWAM HTTP/1.1" 200 52035
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:108]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[110:122]
+DEBUG:multipart.multipart:Calling on_header_value with data[124:133]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[137:32768]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:13609]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:1]
+DEBUG:multipart.multipart:Calling on_part_data with data[13610:22923]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/audio/transcriptions
+DEBUG:openai:api_version=None data="{'model': 'whisper-1'}" message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/audio/transcriptions HTTP/1.1" 200 45
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/audio/transcriptions processing_ms=424 request_id=6b23baa4ee96a2bc9974135e7d75a8ce response_code=200
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "You are a high-performing lead generator and your name is Ava. Your goal is to get the user\'s name, phone number & email address so sales people can follow up later. Keep responses under 20 words. Your response will be very convincing and try to get the user to with their contact info."}, {"role": "user", "content": "hello I would like to provide you with my phone number and please follow up to me 0 5 5 5 6 6 6 7 7 7"}, {"role": "assistant", "content": "Thank you for your interest! To assist you better, could you please also provide your full name and email address?"}, {"role": "user", "content": "Testing, testing."}, {"role": "assistant", "content": "Thank you for testing! If you have any questions or would like to provide your contact information for later follow-up, please let me know."}, {"role": "user", "content": "Testing, testing, one, two, three."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=1316 request_id=c5ce6b05232416eba3d87fbf6d069a43 response_code=200
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.elevenlabs.io:443
+DEBUG:urllib3.connectionpool:https://api.elevenlabs.io:443 "POST /v1/text-to-speech/21m00Tcm4TlvDq8ikWAM HTTP/1.1" 200 55588
