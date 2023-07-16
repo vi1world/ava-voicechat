@@ -3,7 +3,7 @@ FROM node:alpine AS build-node
 WORKDIR /app
 COPY /frontend/package.json .
 RUN yarn install
-COPY chatbot/frontend .
+COPY /frontend .
 RUN yarn build
 
 # ---- Python Back-end ----
@@ -12,5 +12,5 @@ WORKDIR /app
 COPY --from=build-node /app/build /app/static
 COPY /backend/requirements.txt .
 RUN pip install -r requirements.txt
-COPY chatbot/backend .
+COPY /backend .
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
