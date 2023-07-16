@@ -1,16 +1,16 @@
 # ---- Base Node ----
-FROM node:alpine AS build-node
+FROM node:14-alpine as build-node
 WORKDIR /app
-COPY frontend/package.json .
+COPY ./frontend/package.json ./frontend/yarn.lock ./
 RUN yarn install
-COPY frontend .
+COPY ./frontend/ ./
 RUN yarn build
 
 # ---- Python Back-end ----
-FROM python:3.9
+FROM python:3.9-slim
 WORKDIR /app
-COPY --from=build-node /app/build /app/static
-COPY backend/requirements.txt .
+COPY --from=build-node /app/frontend/build /app/static
+COPY ./backend/requirements.txt ./
 RUN pip install -r requirements.txt
-COPY backend .
+COPY ./backend/ ./
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
