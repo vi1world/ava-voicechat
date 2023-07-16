@@ -3,19 +3,21 @@ import { useState } from "react";
 import RecordIcon from "./RecordIcon";
 
 type Props = {
-  handleStop: any;
+  handleStop: (blobUrl: string) => void;
 };
 
 const RecordMessage = ({ handleStop }: Props) => {
   const [recording, setRecording] = useState(false);
 
-  const toggleRecording = (start, stop) => {
+  // This function will be called when the button is clicked.
+  // If recording is currently happening, it stops it, and vice versa.
+  const toggleRecording = (start: () => void, stop: () => void) => {
     if (recording) {
-      stop();
+      stop();  // stop recording if it's currently happening
     } else {
-      start();
+      start(); // start recording if it's currently stopped
     }
-    setRecording(!recording);
+    setRecording(!recording); // update the recording state
   };
 
   return (
@@ -25,6 +27,7 @@ const RecordMessage = ({ handleStop }: Props) => {
         render={({ status, startRecording, stopRecording }) => (
            <div className="mt-2">
              <button
+                // Call the toggleRecording function when the button is clicked
                 onClick={() => toggleRecording(startRecording, stopRecording)}
                 className="bg-white p-4 rounded-full"
              >
